@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ disease.name }}</title>
+</head>
+<body>
+    <h1>{{ disease.name }}</h1>
+    <p>{{ disease.description }}</p>
+    <a href="{{ url_for('modify_disease_form', disease_id=disease.id) }}">Edit</a>
+    <a href="{{ url_for('delete_disease_form', disease_id=disease.id) }}">Delete</a>
+    <br><br>
+    <a href="{{ url_for('get_diseases') }}">Back to List</a>
+</body>
+</html>

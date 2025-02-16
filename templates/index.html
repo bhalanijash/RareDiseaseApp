@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diseases</title>
+</head>
+<body>
+    <h1>List of Diseases</h1>
+    <ul>
+        {% for disease in diseases %}
+            <li>
+                <a href="{{ url_for('get_disease', disease_id=disease.id) }}">{{ disease.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('add_disease_form') }}">Add New Disease</a>
+</body>
+</html>

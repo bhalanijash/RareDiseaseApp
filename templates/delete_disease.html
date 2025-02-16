@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Disease</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete "{{ disease.name }}"?</h1>
+    <form method="POST" action="{{ url_for('remove_disease', disease_id=disease.id) }}">
+        <button type="submit">Yes, Delete</button>
+    </form>
+    <br>
+    <a href="{{ url_for('get_diseases') }}">Cancel</a>
+</body>
+</html>
