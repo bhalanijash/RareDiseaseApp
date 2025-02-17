@@ -63,7 +63,7 @@ def delete_disease_form(disease_id):
         return render_template('delete_disease.html', disease=disease)
     return "Disease not found", 404
 
-@app.route('/diseases/<int:disease_id>', methods=['DELETE', 'POST'])
+@app.route('/diseases/<int:disease_id>/delete', methods=['POST'])
 def remove_disease(disease_id):
     delete_disease(disease_id)
     return redirect(url_for('get_diseases'))

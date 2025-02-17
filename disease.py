@@ -37,7 +37,7 @@ def update_disease(disease_id, name, description):
 def delete_disease(disease_id):
     connection = get_connection()
     cursor = connection.cursor()
-    cursor.execute("DELETE FROM diseases WHERE id = %s", (disease_id))
+    cursor.execute("DELETE FROM diseases WHERE id = %s", (disease_id,))
     connection.commit()
     cursor.close()
     connection.close()
